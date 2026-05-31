@@ -1,5 +1,10 @@
-##  Live Demo
-[Open Dashboard](https://indian-stock-market-eda.streamlit.app/)
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
+![Finance](https://img.shields.io/badge/Domain-Finance-green)
+![EDA](https://img.shields.io/badge/EDA-Analytics-purple)
+![yFinance](https://img.shields.io/badge/API-yFinance-orange)
+
+[![Live App](https://img.shields.io/badge/Streamlit-Live_App-red)](https://indian-stock-market-eda.streamlit.app/)
 
 # Stock Market Exploratory Data Analysis | Trend and Volatility Insights (India)
 
