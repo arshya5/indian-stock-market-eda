@@ -63,7 +63,9 @@ Visualizations were used extensively to support observations and make patterns e
 
 ![Price Trend](eda/visualizations/price_trend.png)
 
-This chart shows a clear long-term upward trajectory with intermittent sharp corrections. The noticeable drop around 2018 highlights a structural break, after which the market transitions into a new growth phase.
+This chart shows a strong long-term upward trend, with the stock price increasing from approximately ₹190 in 2015 to nearly ₹1,300 by 2021. Despite several corrections, the overall trajectory remains positive.
+
+The sharp decline around 2018 represents a structural break in market behavior. This period coincides with the IL&FS financial crisis, which triggered broader concerns around liquidity and credit risk across Indian financial markets. Following this disruption, the market entered a new growth phase and recovered strongly.
 
 ---
 
@@ -71,7 +73,9 @@ This chart shows a clear long-term upward trajectory with intermittent sharp cor
 
 ![Volatility](eda/visualizations/rolling_volatility.png)
 
-Volatility appears in distinct clusters rather than remaining constant. The sharp spike around 2018 indicates a period of heightened market instability, followed by gradual stabilization — supporting the idea of volatility clustering and mean reversion.
+Volatility appears in distinct clusters rather than remaining constant. For most of the analysis period, volatility remained relatively stable before surging sharply during the 2018 market disruption, reaching nearly 9%.
+
+The subsequent decline in volatility supports the concepts of volatility clustering and mean reversion, where periods of instability are followed by calmer market conditions.
 
 ---
 
@@ -79,7 +83,9 @@ Volatility appears in distinct clusters rather than remaining constant. The shar
 
 ![Returns](eda/visualizations/returns_distribution.png)
 
-The distribution is centered around zero, indicating that most daily price changes are small. However, the presence of long tails shows that extreme movements occur more frequently than expected, confirming fat-tailed behavior.
+The distribution is centered around zero, indicating that most daily price changes are relatively small. However, extreme observations extend roughly from -13% to +15%, demonstrating that large market movements occur more frequently than would be expected under a normal distribution.
+
+This confirms the presence of fat-tailed behavior and highlights the importance of accounting for tail risk when evaluating investment decisions.
 
 ---
 
@@ -103,7 +109,9 @@ There is no strong linear relationship between volume and price. Data points are
 
 ![Cumulative Returns](eda/visualizations/cumulative_returns.png)
 
-Despite short-term fluctuations and drawdowns, cumulative returns show consistent long-term growth. This reinforces the presence of a sustained upward trend over time.
+Despite short-term fluctuations and significant drawdowns, cumulative returns demonstrate strong long-term wealth creation. A hypothetical ₹1 investment grew to approximately ₹7 during the analysis period.
+
+This reinforces the importance of long-term investing and highlights how sustained growth can outweigh temporary market disruptions.
 
 ---
 
@@ -111,35 +119,35 @@ Despite short-term fluctuations and drawdowns, cumulative returns show consisten
 
 ![Returns Over Time](eda/visualizations/returns_over_time.png)
 
-Returns fluctuate around zero with occasional sharp spikes, highlighting periods of market shocks and increased volatility.
+Returns fluctuate around zero with occasional sharp spikes, highlighting periods of market shocks and increased volatility. The most extreme movements occur during periods of market stress, further supporting the presence of tail risk in financial markets.
 
 ---
 
-### Key Insights
-- Markets move in regimes (not linear trends)
-- Volatility clusters during unstable periods
-- Returns show fat-tail risk (extreme events)
-- Long-term trend remains positive despite short-term shocks
-  
+## Key Insights
+
+* The stock appreciated from approximately ₹190 to nearly ₹1,300 during the analysis period
+* Market behavior is characterized by distinct regimes rather than smooth linear trends
+* Volatility clusters during periods of instability, particularly during the 2018 market disruption
+* Daily returns exhibit fat-tail risk, with extreme observations ranging from roughly -13% to +15%
+* A hypothetical ₹1 investment grew to approximately ₹7 despite multiple drawdowns and market shocks
+
 ---
 
 ## Results and Insights
 
-Stock prices do not move in a smooth or predictable manner. Instead, they exhibit structural breaks, where sudden shifts are followed by new phases of behavior. This suggests that markets operate in distinct regimes.
+Stock prices do not move in a smooth or predictable manner. Instead, they exhibit structural breaks, where sudden shifts are followed by new phases of behavior. This suggests that markets operate in distinct regimes rather than continuous trends.
 
 Volatility appears in bursts rather than remaining constant. These bursts tend to cluster, indicating that periods of instability persist before stabilizing.
 
-Daily returns are mostly small and centered around zero, but extreme movements occur more frequently than expected. This reflects a fat-tailed distribution and highlights higher market risk.
+Daily returns are mostly small and centered around zero, but extreme movements occur more frequently than expected. The presence of returns ranging from approximately -13% to +15% highlights the importance of tail-risk awareness in financial decision-making.
 
-Volatility shows mean-reverting behavior, where spikes are followed by calmer periods.
+Volatility demonstrates mean-reverting characteristics, where periods of elevated uncertainty are often followed by stabilization.
 
-There is also strong autocorrelation in price movements, suggesting short-term momentum effects.
+Moving averages help confirm trend direction but lag behind real-time market movements, making them more useful as confirmation indicators than predictive tools.
 
-Moving averages help confirm trends but lag behind actual price changes.
+Trading volume does not exhibit a consistent relationship with price direction, suggesting that price movement is influenced by a combination of factors including sentiment, macroeconomic conditions, and broader market dynamics.
 
-Volume does not show a consistent relationship with price direction, indicating that price movements are influenced by additional factors.
-
-Despite short-term noise, cumulative returns show a consistent long-term growth trend.
+Despite short-term noise, volatility spikes, and temporary drawdowns, long-term performance remains strongly positive, with cumulative returns increasing approximately sevenfold over the analysis period.
 
 ---
 
@@ -152,10 +160,12 @@ Despite short-term noise, cumulative returns show a consistent long-term growth 
 
 ---
 
-## Practical Takeaways:
-- Avoid decision-making during high volatility
-- Focus on long-term trends
-- Use indicators as confirmation, not prediction
+## Practical Takeaways
+
+* Avoid making emotional decisions during volatility spikes
+* Focus on long-term trend direction rather than daily noise
+* Consider tail-risk events when evaluating investments
+* Use technical indicators as supporting tools, not standalone predictors
 
 ---
 
@@ -178,24 +188,24 @@ Despite short-term noise, cumulative returns show a consistent long-term growth 
 
 ## Repository Structure
 
-```
-/data  
-/notebooks  
-/visualizations  
-app.py  
-requirements.txt  
-README.md  
+```text
+/data
+/notebooks
+/visualizations
+app.py
+requirements.txt
+README.md
 ```
 
 ---
 
 ## Running the Project
 
-```
-git clone https://github.com/arshya5/Indian-stock-market-prediction.git  
-cd Indian-stock-market-prediction  
-pip install -r requirements.txt  
-streamlit run app.py  
+```bash
+git clone https://github.com/arshya5/Indian-stock-market-prediction.git
+cd Indian-stock-market-prediction
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
 ---
@@ -204,4 +214,4 @@ streamlit run app.py
 
 This project focuses on understanding financial markets through structured analysis rather than relying solely on complex modeling. It emphasizes clarity, interpretation, and the ability to extract meaningful insights from data.
 
----
+The goal is not to predict every market movement, but to better understand the patterns, risks, and behaviors that shape long-term market performance.
