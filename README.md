@@ -1,3 +1,5 @@
+##  Live Demo
+[Open Dashboard](https://indian-stock-market-eda.streamlit.app/)
 
 # Stock Market Exploratory Data Analysis | Trend and Volatility Insights (India)
 
